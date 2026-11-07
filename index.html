@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>肉呆大管家 · 肉呆去广告</title>
-<meta name="description" content="肉呆大管家：Mac 清理、卸载、手机传图。肉呆去广告：关掉安卓手机的开屏广告、热搜和营销推送。">
-<meta property="og:title" content="肉呆大管家 · 肉呆去广告">
-<meta property="og:description" content="清理 Mac，关掉手机里的广告。">
+<title>肉呆大管家 · 肉呆去广告 · 肉呆爱动效</title>
+<meta name="description" content="肉呆大管家：Mac 清理、卸载、手机传图。肉呆去广告：关掉安卓手机的开屏广告、热搜和营销推送。肉呆爱动效：口播文稿变动效视频。">
+<meta property="og:title" content="肉呆大管家 · 肉呆去广告 · 肉呆爱动效">
+<meta property="og:description" content="清理 Mac，关掉手机里的广告，口播文稿变动效视频。">
 <meta name="theme-color" content="#EBEFEC">
 <link rel="icon" href="roudai-tools-assets/guanjia-64.png">
 <noscript><style>[role="tabpanel"][hidden] { display: block !important; }</style></noscript>
@@ -297,6 +297,61 @@ body.past-picker .seg { display: flex; }
   body.past-picker .brand { display: none; }
   body.past-picker .seg { margin-right: auto; }
 }
+
+/* 肉呆爱动效 */
+.picks { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.film { margin: 0; border-radius: 22px; overflow: hidden; border: 1px solid var(--line); background: #000; box-shadow: 0 30px 60px -36px rgba(15, 27, 22, .45); }
+.film video, .film img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; }
+.film-cap { margin-top: 12px; font-size: 13px; color: var(--ink-2); }
+.ts-nav { position: sticky; top: 64px; z-index: 5; display: flex; gap: 6px; padding: 10px 0; margin-bottom: 18px; overflow-x: auto; scrollbar-width: none; background: var(--paper); }
+.ts-nav a { flex: none; font-size: 14px; text-decoration: none; color: var(--ink-2); border: 1px solid var(--line); border-radius: 999px; padding: 4px 14px; white-space: nowrap; }
+.ts-nav a:hover { color: var(--ink); border-color: var(--ink-2); }
+.ts-list { display: grid; gap: 56px; margin: 0; padding: 0; list-style: none; }
+.ts { display: grid; grid-template-columns: minmax(0, 1.75fr) minmax(0, 1fr); gap: 36px; align-items: start; scroll-margin-top: 130px; }
+.ts-pics { display: grid; gap: 14px; min-width: 0; }
+.shot { position: relative; margin: 0; border-radius: 16px; border: 1px solid var(--line); background: #1D1A18; line-height: 0; overflow: hidden; }
+.shot a { display: block; border-radius: 13px; overflow: hidden; }
+.shot img { display: block; width: 100%; height: auto; }
+.pin { position: absolute; display: grid; place-items: center; width: 30px; height: 30px; margin: -15px 0 0 -15px; border-radius: 50%; background: #F24E2A; color: #fff; font: 700 15px/1 var(--sans); border: 2px solid #fff; box-shadow: 0 2px 8px rgba(0, 0, 0, .45); pointer-events: none; animation: pin-in .4s cubic-bezier(.2, .9, .3, 1.3) both; }
+.ring { position: absolute; border: 3px solid #F24E2A; border-radius: 10px; pointer-events: none; }
+@keyframes pin-in { from { transform: scale(.4); opacity: 0; } to { transform: none; opacity: 1; } }
+.ts-no { display: inline-block; font-size: 13px; font-weight: 600; color: var(--on-cobalt); background: var(--cobalt); border-radius: 999px; padding: 2px 12px; }
+.ts h3 { font-size: 28px; font-weight: 600; letter-spacing: -0.01em; margin-top: 12px; }
+.ts-do { display: grid; gap: 12px; margin: 18px 0 0; padding: 0; list-style: none; counter-reset: d; }
+.ts-do li { counter-increment: d; display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 10px; font-size: 16px; }
+.ts-do li::before { content: counter(d); display: grid; place-items: center; width: 26px; height: 26px; margin-top: 1px; border-radius: 50%; background: #F24E2A; color: #fff; font: 700 13px/1 var(--sans); }
+.ts-do b { color: var(--cobalt); font-weight: 600; }
+.ts-two { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.menu-demo { display: grid; gap: 2px; padding: 8px; border-radius: 14px; background: #35302D; color: #F5F2EC; font-size: 15px; font-weight: 600; max-width: 320px; }
+.menu-demo span { padding: 8px 12px; border-radius: 8px; }
+.menu-demo span:first-child { background: #E4F56B; color: #1D1A18; }
+kbd { display: inline-block; font: 600 13px/1 var(--sans); padding: 4px 7px 5px; border-radius: 6px; background: var(--panel); border: 1px solid var(--line); box-shadow: 0 2px 0 var(--line); margin: 0 1px; }
+.ts-note { margin: 16px 0 0; font-size: 14px; color: var(--ink-2); }
+.drag { display: flex; align-items: center; justify-content: center; gap: 22px; padding: 44px 20px; line-height: 1.4; background: var(--panel); border-radius: 13px; }
+.drag div { display: grid; justify-items: center; gap: 12px; font-size: 16px; font-weight: 500; }
+.drag img { width: 132px; height: 132px; }
+.drag svg { width: 96px; height: 54px; color: #F24E2A; flex: none; }
+.lib { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.lib figure { margin: 0; min-width: 0; }
+.lib img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border-radius: 12px; border: 1px solid var(--line); background: #000; object-fit: cover; }
+.lib figcaption { display: flex; justify-content: space-between; gap: 8px; margin-top: 8px; font-size: 15px; font-weight: 500; }
+.lib figcaption span { font-weight: 400; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.credit { font-size: 14px; color: var(--ink-2); margin: 28px 0 0; }
+.credit a { color: var(--ink); }
+@media (prefers-reduced-motion: reduce) { .pin { animation: none; } }
+@media (max-width: 980px) {
+  .picks { grid-template-columns: minmax(0, 1fr); }
+  .ts { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+  .lib { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ts-nav { top: 64px; }
+}
+@media (max-width: 620px) {
+  .pin { width: 22px; height: 22px; margin: -11px 0 0 -11px; font-size: 12px; border-width: 1.5px; }
+  .drag { gap: 10px; padding: 28px 10px; }
+  .drag img { width: 84px; height: 84px; }
+  .drag svg { width: 54px; height: 30px; }
+  .ts-list { gap: 44px; }
+}
 </style>
 </head>
 <body>
@@ -307,6 +362,7 @@ body.past-picker .seg { display: flex; }
     <div class="seg" role="group" aria-label="切换软件">
       <button type="button" data-app="guanjia" aria-pressed="true">肉呆大管家</button>
       <button type="button" data-app="cleaner" aria-pressed="false">肉呆去广告</button>
+      <button type="button" data-app="motion" aria-pressed="false">肉呆爱动效</button>
     </div>
     <nav class="nav" id="nav-guanjia" aria-label="页面导航">
       <a href="#g-download">下载</a>
@@ -322,6 +378,12 @@ body.past-picker .seg { display: flex; }
       <a href="#c-devices">机型</a>
       <a href="#c-faq">常见问题</a>
       <a href="https://ahuamiao.com/sites/other/android-tutorial.html" target="_blank" rel="noopener">手机版教程</a>
+    </nav>
+    <nav class="nav" id="nav-motion" aria-label="页面导航" hidden>
+      <a href="#m-download">下载</a>
+      <a href="#m-tutorial">教程</a>
+      <a href="#m-library">动效库</a>
+      <a href="#m-faq">常见问题</a>
     </nav>
     <a class="tut" id="top-tut" href="https://ahuamiao.com/sites/other/android-tutorial.html" target="_blank" rel="noopener" aria-label="手机版教程" hidden>教程</a>
     <a class="gh" id="top-gh" href="https://github.com/rddmwmddr/roudai-guanjia" target="_blank" rel="noopener">
@@ -348,6 +410,14 @@ body.past-picker .seg { display: flex; }
           <b>肉呆去广告 <i class="pick-state" style="font-style:normal">正在看</i></b>
           <span>关掉安卓手机的开屏广告、热搜、资讯推荐和营销推送。无需 root，每一项可还原。</span>
           <small>Mac · Windows · 免费 · MIT 开源</small>
+        </span>
+      </button>
+      <button type="button" class="pick" role="tab" id="pick-motion" data-app="motion" aria-selected="false" aria-controls="app-motion" tabindex="-1">
+        <span class="pick-mark"><img src="roudai-tools-assets/motion.png" alt="" width="64" height="64"></span>
+        <span class="pick-text">
+          <b>肉呆爱动效 <i class="pick-state" style="font-style:normal">正在看</i></b>
+          <span>导入口播文稿或 A-roll，生成动效分镜，拖片段，拆分组合，换效果，导出 MP4。</span>
+          <small>Mac · 免费 · 已通过 Apple 公证</small>
         </span>
       </button>
     </div>
@@ -507,6 +577,215 @@ body.past-picker .seg { display: flex; }
       <a href="https://github.com/rddmwmddr/roudai-guanjia/releases" target="_blank" rel="noopener">更新说明</a>
       <a href="https://github.com/rddmwmddr/roudai-guanjia/issues" target="_blank" rel="noopener">反馈问题</a>
       <a href="https://github.com/rddmwmddr/roudai-guanjia/releases" target="_blank" rel="noopener">全部版本</a>
+    </nav>
+  </div>
+</footer>
+</div>
+
+<div class="panel" id="app-motion" role="tabpanel" aria-labelledby="pick-motion" tabindex="-1" hidden>
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <div class="label">源码公开 · MAC 客户端</div>
+      <h1>口播文稿变动效视频</h1>
+      <p class="lead">导入文稿或 A-roll，生成分镜，拖片段，换效果，导出 MP4。</p>
+      <div class="cta">
+        <a class="btn primary" id="m-hero-cn" href="#m-download">国内下载 <small>Mac</small></a>
+        <a class="btn" id="m-hero-gh" href="#m-download">GitHub 下载</a>
+        <a class="btn" href="#m-tutorial">看教程</a>
+      </div>
+      <p class="meta" id="m-hero-meta"></p>
+      <ul class="facts">
+        <li>703 个动效</li><li>11 个分类</li><li>4K 60 帧</li><li>Apple 公证</li><li>源码公开</li>
+      </ul>
+    </div>
+    <div>
+      <figure class="film"><video src="roudai-tools-assets/m-demo.mp4" poster="roudai-tools-assets/m-demo.jpg" autoplay muted loop playsinline preload="metadata" width="1280" height="720" aria-label="肉呆爱动效导出的示例片段"></video></figure>
+      <p class="film-cap">肉呆爱动效的导出成片。示例文稿，示例数字。</p>
+    </div>
+  </div>
+</div>
+
+<section id="m-download">
+  <div class="wrap">
+    <div class="head">
+      <h2>下载</h2>
+      <p class="lead" id="m-dl-lead"></p>
+    </div>
+    <div class="dl g">
+      <article class="card mine" id="m-dl"></article>
+      <article class="card">
+        <span class="os">安装</span>
+        <h3>拖到应用程序</h3>
+        <ol>
+          <li>双击 RouDaiAiDongXiao.dmg，拖「肉呆爱动效」到「Applications」。</li>
+          <li>打开「应用程序」里的肉呆爱动效。系统弹窗：点「打开」。</li>
+        </ol>
+      </article>
+      <article class="card">
+        <span class="os">系统</span>
+        <h3>版本要求</h3>
+        <ul>
+          <li>文稿、分镜、导出：macOS 13 及以上。</li>
+          <li>A-roll 识别：macOS 26 及以上。</li>
+          <li>Apple 芯片和 Intel 通用。</li>
+        </ul>
+      </article>
+    </div>
+    <div class="after" id="m-dl-after"></div>
+    <details class="sums"><summary>SHA-256 校验值</summary><div class="sumlist" id="m-sums"></div></details>
+  </div>
+</section>
+
+<section id="m-tutorial">
+  <div class="wrap">
+    <div class="head">
+      <h2>教程</h2>
+      <p class="lead">十一步。一步一张图，黄框是要点的地方。截图里是示例文稿。</p>
+    </div>
+    <nav class="ts-nav" aria-label="教程步骤"><a href="#m-step-1">1 下载安装</a><a href="#m-step-2">2 打开软件</a><a href="#m-step-3">3 导入文稿</a><a href="#m-step-4">4 生成分镜</a><a href="#m-step-5">5 点片段，看脚本</a><a href="#m-step-6">6 拖片段改时长</a><a href="#m-step-7">7 拆分和组合</a><a href="#m-step-8">8 点胶囊换效果</a><a href="#m-step-9">9 改字和数字</a><a href="#m-step-10">10 导出 MP4</a><a href="#m-step-11">11 导入 A-roll</a></nav>
+    <ol class="ts-list">
+      <li class="ts" id="m-step-1">
+        <div class="ts-pics"><figure class="shot"><div class="drag">
+  <div><img src="roudai-tools-assets/motion.png" alt="" width="132" height="132">肉呆爱动效</div>
+  <svg viewBox="0 0 96 54" fill="none" aria-hidden="true"><path d="M4 40C26 6 62 4 88 26" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-dasharray="1 10"/><path d="M90 10v18H72" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  <div><img src="roudai-tools-assets/applications.png" alt="" width="132" height="132">Applications</div>
+</div></figure></div>
+        <div>
+          <span class="ts-no">第 1 步</span>
+          <h3>下载安装</h3>
+          <ol class="ts-do"><li><span>点本页的<b>国内下载</b>。</span></li><li><span>双击 dmg，拖<b>肉呆爱动效</b>到 <b>Applications</b>。</span></li><li><span>打开肉呆爱动效。系统弹窗：点<b>打开</b>。</span></li></ol>
+          
+        </div>
+      </li>
+      <li class="ts" id="m-step-2">
+        <div class="ts-pics"><figure class="shot"><a href="roudai-tools-assets/m-fig-areas.jpg" target="_blank" rel="noopener"><img src="roudai-tools-assets/m-fig-areas.jpg" alt="剪辑台：画面、脚本框、时间线三个区域" width="1720" height="1310" loading="lazy"></a></figure></div>
+        <div>
+          <span class="ts-no">第 2 步</span>
+          <h3>打开软件</h3>
+          <ol class="ts-do"><li><span>示例分镜开始播放。</span></li><li><span>上方是画面，右侧是脚本框，下方是时间线。</span></li><li><span>工具栏三个图标：文稿、画面、分镜表。</span></li></ol>
+          <p class="ts-note"><kbd>⌘</kbd><kbd>N</kbd>：新建空白文稿。</p>
+        </div>
+      </li>
+      <li class="ts" id="m-step-3">
+        <div class="ts-pics"><figure class="shot"><a href="roudai-tools-assets/m-fig-tab.jpg" target="_blank" rel="noopener"><img src="roudai-tools-assets/m-fig-tab.jpg" alt="工具栏：文稿页按钮" width="1200" height="370" loading="lazy"></a></figure><figure class="shot"><a href="roudai-tools-assets/m-fig-import.jpg" target="_blank" rel="noopener"><img src="roudai-tools-assets/m-fig-import.jpg" alt="文稿页底部：导入文本和导入 A-roll" width="1952" height="582" loading="lazy"></a></figure></div>
+        <div>
+          <span class="ts-no">第 3 步</span>
+          <h3>导入文稿</h3>
+          <ol class="ts-do"><li><span>点工具栏的<b>文稿页</b>。</span></li><li><span>点<b>导入文本</b>，选文件。文件拖进窗口：同一个效果。</span></li><li><span>格式：Word、WPS、Pages、PPT、Keynote、Excel、Numbers、PDF、epub、网页、字幕、纯文本、图片。</span></li></ol>
+          <p class="ts-note">扫描版 PDF 和图片：文字识别。</p>
+        </div>
+      </li>
+      <li class="ts" id="m-step-4">
+        <div class="ts-pics"><figure class="shot"><a href="roudai-tools-assets/m-fig-generate.jpg" target="_blank" rel="noopener"><img src="roudai-tools-assets/m-fig-generate.jpg" alt="文稿页右下角：生成分镜" width="1952" height="398" loading="lazy"></a></figure></div>
+        <div>
+          <span class="ts-no">第 4 步</span>
+          <h3>生成分镜</h3>
+          <ol class="ts-do"><li><span>选分镜方式：规则（离线）或 AI。</span></li><li><span>点<b>生成分镜</b>。</span></li></ol>
+          <p class="ts-note">规则模式：离线。AI 模式：发送文稿到你选的服务。Key：你自己填，存进本机钥匙串。</p>
+        </div>
+      </li>
+      <li class="ts" id="m-step-5">
+        <div class="ts-pics"><figure class="shot"><a href="roudai-tools-assets/m-fig-follow.jpg" target="_blank" rel="noopener"><img src="roudai-tools-assets/m-fig-follow.jpg" alt="点片段，脚本框跳到这一句" width="1720" height="1308" loading="lazy"></a></figure></div>
+        <div>
+          <span class="ts-no">第 5 步</span>
+          <h3>点片段，看脚本</h3>
+          <ol class="ts-do"><li><span>点时间线的片段。</span></li><li><span>脚本框跳到这一句，高亮这一句，播放进度带着字走。</span></li><li><span>点脚本框的句子：时间线跳到这一镜。</span></li></ol>
+          <p class="ts-note"><kbd>空格</kbd>：播放或暂停。</p>
+        </div>
+      </li>
+      <li class="ts" id="m-step-6">
+        <div class="ts-pics"><figure class="shot"><a href="roudai-tools-assets/m-fig-trim-before.jpg" target="_blank" rel="noopener"><img src="roudai-tools-assets/m-fig-trim-before.jpg" alt="拖之前：按住片段右边缘" width="1952" height="682" loading="lazy"></a></figure><figure class="shot"><a href="roudai-tools-assets/m-fig-trim-after.jpg" target="_blank" rel="noopener"><img src="roudai-tools-assets/m-fig-trim-after.jpg" alt="拖之后：气泡显示秒数" width="1952" height="682" loading="lazy"></a></figure></div>
+        <div>
+          <span class="ts-no">第 6 步</span>
+          <h3>拖片段改时长</h3>
+          <ol class="ts-do"><li><span>按住片段<b>右边缘</b>。右拖：加长。左拖：缩短。</span></li><li><span>看气泡里的秒数。松手：时长写进分镜。</span></li><li><span><kbd>⌘</kbd><kbd>Z</kbd>：撤销。</span></li></ol>
+          <p class="ts-note">右键片段：恢复自动时长。</p>
+        </div>
+      </li>
+      <li class="ts" id="m-step-7">
+        <div class="ts-pics"><div class="ts-two"><figure class="shot"><a href="roudai-tools-assets/m-fig-split-before.jpg" target="_blank" rel="noopener"><img src="roudai-tools-assets/m-fig-split-before.jpg" alt="光标放进句子" width="954" height="562" loading="lazy"></a></figure><figure class="shot"><a href="roudai-tools-assets/m-fig-split-after.jpg" target="_blank" rel="noopener"><img src="roudai-tools-assets/m-fig-split-after.jpg" alt="按回车，一句拆成两句" width="954" height="562" loading="lazy"></a></figure></div><figure class="shot"><a href="roudai-tools-assets/m-fig-pick.jpg" target="_blank" rel="noopener"><img src="roudai-tools-assets/m-fig-pick.jpg" alt="⌘ 点两个片段" width="1952" height="480" loading="lazy"></a></figure><div class="menu-demo"><span>组合这 2 镜</span><span>重新匹配这 2 镜</span><span>导出这 2 镜…</span></div></div>
+        <div>
+          <span class="ts-no">第 7 步</span>
+          <h3>拆分和组合</h3>
+          <ol class="ts-do"><li><span>拆开：光标放进脚本框的句子，按 <kbd>回车</kbd>。时间线：按 <kbd>B</kbd>，拆在播放头。</span></li><li><span>并回：句首按 <kbd>退格</kbd>。</span></li><li><span>组合：选中几句，或 ⌘ 点几个片段，右键选<b>组合</b>。右键菜单：<b>组合</b>、<b>重新匹配</b>、<b>导出</b>。</span></li></ol>
+          <p class="ts-note">拆开和组合后：动效重配。胶囊里自选。</p>
+        </div>
+      </li>
+      <li class="ts" id="m-step-8">
+        <div class="ts-pics"><figure class="shot"><a href="roudai-tools-assets/m-fig-capsule.jpg" target="_blank" rel="noopener"><img src="roudai-tools-assets/m-fig-capsule.jpg" alt="时间线：片段上方的效果胶囊" width="1952" height="274" loading="lazy"></a></figure><figure class="shot"><a href="roudai-tools-assets/m-fig-picker.jpg" target="_blank" rel="noopener"><img src="roudai-tools-assets/m-fig-picker.jpg" alt="挑选窗口：搜索、分类、预览、效果" width="1380" height="1484" loading="lazy"></a></figure></div>
+        <div>
+          <span class="ts-no">第 8 步</span>
+          <h3>点胶囊换效果</h3>
+          <ol class="ts-do"><li><span>点片段上方的<b>胶囊</b>。</span></li><li><span>选分类，或输入搜索词。</span></li><li><span>点效果：预览框播放，画面换成这个效果。</span></li></ol>
+          <p class="ts-note">703 个动效，11 个分类。</p>
+        </div>
+      </li>
+      <li class="ts" id="m-step-9">
+        <div class="ts-pics"><figure class="shot"><a href="roudai-tools-assets/m-fig-inspector.jpg" target="_blank" rel="noopener"><img src="roudai-tools-assets/m-fig-inspector.jpg" alt="右栏：内容、口播、属性" width="1720" height="1112" loading="lazy"></a></figure></div>
+        <div>
+          <span class="ts-no">第 9 步</span>
+          <h3>改字和数字</h3>
+          <ol class="ts-do"><li><span>点工具栏的<b>右栏按钮</b>。</span></li><li><span>改<b>内容</b>里的数字和文字。</span></li><li><span>点画面里的元素：拖动、拉伸、旋转。</span></li></ol>
+          <p class="ts-note">一个动作一步撤销。</p>
+        </div>
+      </li>
+      <li class="ts" id="m-step-10">
+        <div class="ts-pics"><figure class="shot"><a href="roudai-tools-assets/m-fig-export-btn.jpg" target="_blank" rel="noopener"><img src="roudai-tools-assets/m-fig-export-btn.jpg" alt="工具栏：导出按钮" width="1952" height="398" loading="lazy"></a></figure><figure class="shot"><a href="roudai-tools-assets/m-fig-export-sheet.jpg" target="_blank" rel="noopener"><img src="roudai-tools-assets/m-fig-export-sheet.jpg" alt="导出面板：范围、分辨率、帧率" width="1952" height="1198" loading="lazy"></a></figure></div>
+        <div>
+          <span class="ts-no">第 10 步</span>
+          <h3>导出 MP4</h3>
+          <ol class="ts-do"><li><span>点工具栏的<b>导出按钮</b>。</span></li><li><span>选范围、分辨率、帧率。</span></li><li><span>点<b>导出</b>，选文件夹。</span></li></ol>
+          <p class="ts-note">4K 60 帧 MP4，一镜一个文件。</p>
+        </div>
+      </li>
+      <li class="ts" id="m-step-11">
+        <div class="ts-pics"><figure class="shot"><a href="roudai-tools-assets/m-fig-aroll.jpg" target="_blank" rel="noopener"><img src="roudai-tools-assets/m-fig-aroll.jpg" alt="A-roll 分镜：一句一镜，时长对齐声音" width="1720" height="1308" loading="lazy"></a></figure></div>
+        <div>
+          <span class="ts-no">第 11 步</span>
+          <h3>导入 A-roll</h3>
+          <ol class="ts-do"><li><span>点文稿页的<b>导入 A-roll</b>。</span></li><li><span>选视频或音频。</span></li><li><span>离线识别。一句一镜，时长对齐声音，动效配好。</span></li></ol>
+          <p class="ts-note">系统要求：macOS 26 及以上。</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section id="m-library">
+  <div class="wrap">
+    <div class="head">
+      <h2>动效库</h2>
+      <p class="lead">703 个动效，11 个分类。分镜：文稿匹配动效。胶囊：替换动效。</p>
+    </div>
+    <div class="lib"><figure><img src="roudai-tools-assets/lib-percent.jpg" alt="百分比示例" width="480" height="270" loading="lazy"><figcaption>百分比<span>11</span></figcaption></figure><figure><img src="roudai-tools-assets/lib-chart.jpg" alt="图表示例" width="480" height="270" loading="lazy"><figcaption>图表<span>47</span></figcaption></figure><figure><img src="roudai-tools-assets/lib-fine.jpg" alt="细读图表示例" width="480" height="270" loading="lazy"><figcaption>细读图表<span>39</span></figcaption></figure><figure><img src="roudai-tools-assets/lib-text.jpg" alt="文字示例" width="480" height="270" loading="lazy"><figcaption>文字<span>26</span></figcaption></figure><figure><img src="roudai-tools-assets/lib-texfx.jpg" alt="文字特效示例" width="480" height="270" loading="lazy"><figcaption>文字特效<span>124</span></figcaption></figure><figure><img src="roudai-tools-assets/lib-kxs.jpg" alt="状态示例" width="480" height="270" loading="lazy"><figcaption>状态<span>54</span></figcaption></figure><figure><img src="roudai-tools-assets/lib-kxi.jpg" alt="交互示例" width="480" height="270" loading="lazy"><figcaption>交互<span>54</span></figcaption></figure><figure><img src="roudai-tools-assets/lib-kxm.jpg" alt="质感示例" width="480" height="270" loading="lazy"><figcaption>质感<span>54</span></figcaption></figure><figure><img src="roudai-tools-assets/lib-loader.jpg" alt="加载示例" width="480" height="270" loading="lazy"><figcaption>加载<span>99</span></figcaption></figure><figure><img src="roudai-tools-assets/lib-button.jpg" alt="按钮示例" width="480" height="270" loading="lazy"><figcaption>按钮<span>99</span></figcaption></figure><figure><img src="roudai-tools-assets/lib-toggle.jpg" alt="开关提示示例" width="480" height="270" loading="lazy"><figcaption>开关提示<span>96</span></figcaption></figure></div>
+    <p class="credit">动效来源：<a href="https://github.com/showheyohtaki/motion-prompt" target="_blank" rel="noopener">Motion Prompt</a>、<a href="https://github.com/larashero3-dotcom/lieflat-charts" target="_blank" rel="noopener">Lieflat Charts</a>、<a href="https://colorion.co/" target="_blank" rel="noopener">Colorion</a>。效果参考：<a href="https://kinetics.colorion.co/" target="_blank" rel="noopener">Kinetics</a>、<a href="https://verse.rajatsethii.in/" target="_blank" rel="noopener">Verse Text</a>。</p>
+  </div>
+</section>
+
+<section id="m-faq">
+  <div class="wrap">
+    <div class="head"><h2>常见问题</h2></div>
+    <div class="faq">
+      <details><summary>支持哪些文稿格式？</summary><p>Word、WPS、Pages、PPT、Keynote、Excel、Numbers、PDF、epub、网页、字幕、纯文本、图片。扫描版 PDF 和图片：文字识别。</p></details>
+      <details><summary>打开软件看到的是什么？</summary><p>示例分镜：动效和时间线一屏看全。<kbd>⌘</kbd><kbd>N</kbd>：新建空白文稿。</p></details>
+      <details><summary>A-roll 识别要什么系统？</summary><p>macOS 26 及以上。macOS 13 到 15：文稿导入、分镜、导出可用。</p></details>
+      <details><summary>文稿会上传吗？</summary><p>规则模式：离线。A-roll 识别：离线。AI 模式：发送文稿到你选的服务。</p></details>
+      <details><summary>API Key 存在哪里？</summary><p>你自己填的 Key，存进你这台电脑的系统钥匙串。安装包：零 Key。</p></details>
+      <details><summary>支持哪些 Mac？</summary><p>macOS 13 及以上，Apple 芯片和 Intel 通用。这一版的测试系统：macOS 27（Apple 芯片）。其他系统和 Intel 机型的问题：提 Issue。</p></details>
+      <details><summary>成片可以商用吗？</summary><p>39 种细读图表来自 Lieflat Charts，授权条款限定非商业用途。商用视频：选其余 664 种动效，或购买作者的授权。</p></details>
+      <details><summary>分镜文件是什么格式？</summary><p>.dmboard，内容是 JSON 文本。</p></details>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <span>肉呆爱动效 · 源码公开</span>
+    <nav aria-label="页脚链接">
+      <a href="https://github.com/rddmwmddr/roudai-aidongxiao" target="_blank" rel="noopener">源代码</a>
+      <a href="https://github.com/rddmwmddr/roudai-aidongxiao/releases" target="_blank" rel="noopener">更新说明</a>
+      <a href="https://github.com/rddmwmddr/roudai-aidongxiao/issues" target="_blank" rel="noopener">反馈问题</a>
+      <a href="https://github.com/rddmwmddr/roudai-aidongxiao/releases" target="_blank" rel="noopener">全部版本</a>
     </nav>
   </div>
 </footer>
@@ -700,6 +979,20 @@ const GUANJIA = {
 };
 const GUANJIA_REPO = "https://github.com/rddmwmddr/roudai-guanjia";
 
+/* ===== 肉呆爱动效发布信息：发新版时只改这里 ===== */
+const MOTION = {
+  version: "1.0.0",
+  released: "2026-11-07",
+  github: "https://github.com/rddmwmddr/roudai-aidongxiao/releases/download/v1.0.0/",
+  file: "RouDaiAiDongXiao.dmg",
+  size: "10.3 MB",
+  sha: "a64341a707dac6ed28415a03cf6e2970779c23cb4fd06fdd32b27545eea3b258",
+  gitee: "https://gitee.com/rddmw/roudai-aidongxiao/releases/download/v1.0.0/",
+  // Gitee 不可用时把 gitee 留空，国内下载换回这个百度网盘链接
+  baidu: {"url": "https://pan.baidu.com/s/1POgsxUj2cTSCH5kHWfVBXA", "code": "gtra"},
+};
+const MOTION_REPO = "https://github.com/rddmwmddr/roudai-aidongxiao";
+
 /* ===== 下面的 REL 是肉呆去广告的发布信息：去广告发新版后要同步这里 ===== */
 
 /* ===== 发布信息：发新版时只改这里。国内下载走 gitee；Gitee 不可用时把 gitee 留空、填回 baidu，按钮随之恢复 ===== */
@@ -869,6 +1162,29 @@ document.querySelector(".hero h1 .sw").classList.remove("on");
   $("#g-hero-gh").href = direct;
 })();
 
+/* 肉呆爱动效：下载 */
+(function renderMotion(){
+  const m = MOTION, viaPan = !m.gitee && m.baidu, cn = m.gitee ? m.gitee + m.file : viaPan ? panUrl(m.baidu) : "", direct = m.github + m.file;
+  $("#m-dl-lead").textContent = m.gitee ? "一个安装包，Apple 芯片和 Intel 通用。国内下载走 Gitee，不用登录。" : viaPan ? "一个安装包，Apple 芯片和 Intel 通用。国内下载走百度网盘，链接里带提取码。" : "一个安装包，Apple 芯片和 Intel 通用。";
+  $("#m-dl").innerHTML = `<span class="os">MAC</span>
+    <h3>肉呆爱动效 ${esc(m.version)}</h3>
+    <span class="sub">macOS 13 及以上，Apple 芯片和 Intel 通用</span>
+    <span class="note">苹果公证通过，双击打开</span>
+    <span class="size">${esc(m.size)}</span>
+    <div class="btns">
+      ${cn ? `<a class="btn primary" href="${esc(cn)}"${viaPan ? ' target="_blank" rel="noopener"' : ""}>国内下载</a>` : ""}
+      ${viaPan ? `<span class="pwd">提取码 <code>${esc(m.baidu.code)}</code><button class="mini" data-copy="${esc(m.baidu.code)}">复制</button></span>` : ""}
+      <a class="btn ${cn ? "" : "primary"}" href="${esc(direct)}">GitHub 下载</a>
+    </div>`;
+  $("#m-dl-after").innerHTML = `${m.gitee ? '<span><a href="https://gitee.com/rddmw/roudai-aidongxiao/releases" target="_blank" rel="noopener">Gitee 全部版本</a></span>' : ""}<span><a href="${MOTION_REPO}/releases" target="_blank" rel="noopener">GitHub 全部版本</a></span><span><a href="${MOTION_REPO}/releases/tag/v${esc(m.version)}" target="_blank" rel="noopener">v${esc(m.version)} 更新说明</a></span>`;
+  $("#m-sums").innerHTML = `${esc(m.sha)}  ${esc(m.file)}`;
+  $("#m-hero-meta").textContent = `v${m.version} · ${m.released} · macOS 13 及以上 · Apple 芯片和 Intel 通用`;
+  const heroCn = $("#m-hero-cn"), heroGh = $("#m-hero-gh");
+  if (cn) { heroCn.href = cn; if (viaPan) { heroCn.target = "_blank"; heroCn.rel = "noopener"; } } else heroCn.hidden = true;
+  heroGh.href = direct;
+  if (!cn) heroGh.classList.add("primary");
+})();
+
 /* 肉呆大管家：首屏的勾选框可以点着玩，已选大小跟着变 */
 (function guanjiaBoard(){
   const boxes = [...document.querySelectorAll("#app-guanjia .board .ck")];
@@ -887,11 +1203,12 @@ document.querySelector(".hero h1 .sw").classList.remove("on");
   sum();
 })();
 
-/* 顶部切换两个软件 */
+/* 顶部切换三个软件 */
 (function switcher(){
   const APPS = {
     guanjia: { prefix: "g-", repo: GUANJIA_REPO },
     cleaner: { prefix: "c-", repo: REPO },
+    motion: { prefix: "m-", repo: MOTION_REPO },
   };
   const NAMES = Object.keys(APPS);
   const picks = [...document.querySelectorAll(".pick")];
@@ -936,7 +1253,8 @@ document.querySelector(".hero h1 .sw").classList.remove("on");
   $(".picks").addEventListener("keydown", (e) => {
     if (!["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"].includes(e.key)) return;
     e.preventDefault();
-    choose(NAMES[(NAMES.indexOf(current) + 1) % NAMES.length], true);
+    const step = ["ArrowLeft", "ArrowUp"].includes(e.key) ? NAMES.length - 1 : 1;
+    choose(NAMES[(NAMES.indexOf(current) + step) % NAMES.length], true);
   });
   $("#top-brand").addEventListener("click", (e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); });
 
