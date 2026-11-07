@@ -643,7 +643,7 @@ kbd { display: inline-block; font: 600 13px/1 var(--sans); padding: 4px 7px 5px;
       <h2>教程</h2>
       <p class="lead">十一步。一步一张图，黄框是要点的地方。截图里是示例文稿。</p>
     </div>
-    <nav class="ts-nav" aria-label="教程步骤"><a href="#m-step-1">1 下载安装</a><a href="#m-step-2">2 打开软件</a><a href="#m-step-3">3 导入文稿</a><a href="#m-step-4">4 生成分镜</a><a href="#m-step-5">5 点片段，看脚本</a><a href="#m-step-6">6 拖片段改时长</a><a href="#m-step-7">7 拆分和组合</a><a href="#m-step-8">8 点胶囊换效果</a><a href="#m-step-9">9 改字和数字</a><a href="#m-step-10">10 导出 MP4</a><a href="#m-step-11">11 导入 A-roll</a></nav>
+    <nav class="ts-nav" aria-label="教程步骤"><a href="#m-step-1">1 下载安装</a><a href="#m-step-2">2 打开软件</a><a href="#m-step-3">3 导入文稿</a><a href="#m-step-4">4 生成分镜</a><a href="#m-step-5">5 点片段，看脚本</a><a href="#m-step-6">6 拖片段改时长</a><a href="#m-step-7">7 拆分和组合</a><a href="#m-step-8">8 点胶囊换效果</a><a href="#m-step-9">9 改字、数字和颜色</a><a href="#m-step-10">10 导出 MP4</a><a href="#m-step-11">11 导入 A-roll</a></nav>
     <ol class="ts-list">
       <li class="ts" id="m-step-1">
         <div class="ts-pics"><figure class="shot"><div class="drag">
@@ -699,7 +699,7 @@ kbd { display: inline-block; font: 600 13px/1 var(--sans); padding: 4px 7px 5px;
         <div>
           <span class="ts-no">第 6 步</span>
           <h3>拖片段改时长</h3>
-          <ol class="ts-do"><li><span>按住片段<b>右边缘</b>。右拖：加长。左拖：缩短。</span></li><li><span>看气泡里的秒数。松手：时长写进分镜。</span></li><li><span><kbd>⌘</kbd><kbd>Z</kbd>：撤销。</span></li></ol>
+          <ol class="ts-do"><li><span>按住片段<b>右边缘</b>。右拖：加长，动画放慢。左拖：缩短，动画加快。</span></li><li><span>看气泡里的秒数和速率。松手：时长写进分镜。</span></li><li><span>右栏<b>速率</b>：2 是两倍快，0.5 是一半速度。</span></li><li><span><kbd>⌘</kbd><kbd>Z</kbd>：撤销。</span></li></ol>
           <p class="ts-note">右键片段：恢复自动时长。</p>
         </div>
       </li>
@@ -725,8 +725,8 @@ kbd { display: inline-block; font: 600 13px/1 var(--sans); padding: 4px 7px 5px;
         <div class="ts-pics"><figure class="shot"><a href="roudai-tools-assets/m-fig-inspector.jpg" target="_blank" rel="noopener"><img src="roudai-tools-assets/m-fig-inspector.jpg" alt="右栏：内容、口播、属性" width="1720" height="1112" loading="lazy"></a></figure></div>
         <div>
           <span class="ts-no">第 9 步</span>
-          <h3>改字和数字</h3>
-          <ol class="ts-do"><li><span>点工具栏的<b>右栏按钮</b>。</span></li><li><span>改<b>内容</b>里的数字和文字。</span></li><li><span>点画面里的元素：拖动、拉伸、旋转。</span></li></ol>
+          <h3>改字、数字和颜色</h3>
+          <ol class="ts-do"><li><span>点工具栏的<b>右栏按钮</b>。</span></li><li><span>改<b>内容</b>里的数字和文字。</span></li><li><span>换颜色：<b>颜色</b>一栏点色块选色。右键色块：恢复默认。</span></li><li><span>点画面里的元素：拖动、拉伸、旋转。</span></li></ol>
           <p class="ts-note">一个动作一步撤销。</p>
         </div>
       </li>
@@ -769,6 +769,8 @@ kbd { display: inline-block; font: 600 13px/1 var(--sans); padding: 4px 7px 5px;
     <div class="faq">
       <details><summary>支持哪些文稿格式？</summary><p>Word、WPS、Pages、PPT、Keynote、Excel、Numbers、PDF、epub、网页、字幕、纯文本、图片。扫描版 PDF 和图片：文字识别。</p></details>
       <details><summary>打开软件看到的是什么？</summary><p>示例分镜：动效和时间线一屏看全。<kbd>⌘</kbd><kbd>N</kbd>：新建空白文稿。</p></details>
+      <details><summary>能换颜色吗？</summary><p>右栏「颜色」：点色块选色。可换范围：组件、CSS 动效、数据动效的底色、主色、辅色、文字色。右键色块：恢复默认。</p></details>
+      <details><summary>动画快慢怎么调？</summary><p>拖片段右边缘：拉长放慢，缩短加快。右栏「速率」：2 是两倍快，0.5 是一半速度。</p></details>
       <details><summary>A-roll 识别要什么系统？</summary><p>macOS 26 及以上。macOS 13 到 15：文稿导入、分镜、导出可用。</p></details>
       <details><summary>文稿会上传吗？</summary><p>规则模式：离线。A-roll 识别：离线。AI 模式：发送文稿到你选的服务。</p></details>
       <details><summary>API Key 存在哪里？</summary><p>你自己填的 Key，存进你这台电脑的系统钥匙串。安装包：零 Key。</p></details>
@@ -981,13 +983,13 @@ const GUANJIA_REPO = "https://github.com/rddmwmddr/roudai-guanjia";
 
 /* ===== 肉呆爱动效发布信息：发新版时只改这里 ===== */
 const MOTION = {
-  version: "1.1.0",
+  version: "1.2.0",
   released: "2026-11-07",
-  github: "https://github.com/rddmwmddr/roudai-aidongxiao/releases/download/v1.1.0/",
+  github: "https://github.com/rddmwmddr/roudai-aidongxiao/releases/download/v1.2.0/",
   file: "RouDaiAiDongXiao.dmg",
   size: "10.3 MB",
-  sha: "26faf9549139694bf001fdccecae652aeee3a1c49dbe1b2c1ebe7b15ba21e008",
-  gitee: "https://gitee.com/rddmw/roudai-aidongxiao/releases/download/v1.1.0/",
+  sha: "a71e990183df2c51b89a31d0fe06b4ea7659a1356f0ad1445965b6acf6a2a608",
+  gitee: "https://gitee.com/rddmw/roudai-aidongxiao/releases/download/v1.2.0/",
   // Gitee 不可用时把 gitee 留空，国内下载换回这个百度网盘链接
   baidu: {"url": "https://pan.baidu.com/s/1POgsxUj2cTSCH5kHWfVBXA", "code": "gtra"},
 };
