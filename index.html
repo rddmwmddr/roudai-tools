@@ -296,6 +296,9 @@ body.past-picker .seg { display: flex; }
   .pick-text span { font-size: 14px; }
   body.past-picker .brand { display: none; }
   body.past-picker .seg { margin-right: auto; }
+  .top .wrap { gap: 8px; }
+  .seg button { font-size: 12px; padding: 5px 6px; }
+  .gh { margin-left: 0; padding: 8px; font-size: 0; gap: 0; flex: none; }
 }
 
 /* 肉呆爱动效 */
@@ -381,6 +384,7 @@ kbd { display: inline-block; font: 600 13px/1 var(--sans); padding: 4px 7px 5px;
     </nav>
     <nav class="nav" id="nav-motion" aria-label="页面导航" hidden>
       <a href="#m-download">下载</a>
+      <a href="#m-research">调研动效</a>
       <a href="#m-tutorial">教程</a>
       <a href="#m-library">动效库</a>
       <a href="#m-faq">常见问题</a>
@@ -592,11 +596,12 @@ kbd { display: inline-block; font: 600 13px/1 var(--sans); padding: 4px 7px 5px;
       <div class="cta">
         <a class="btn primary" id="m-hero-cn" href="#m-download">国内下载 <small>Mac</small></a>
         <a class="btn" id="m-hero-gh" href="#m-download">GitHub 下载</a>
+        <a class="btn" href="#m-research">1.4 调研预览版</a>
         <a class="btn" href="#m-tutorial">看教程</a>
       </div>
       <p class="meta" id="m-hero-meta"></p>
       <ul class="facts">
-        <li>733 个动效</li><li>11 个分类</li><li>4K 60 帧</li><li>Apple 公证</li><li>源码公开</li>
+        <li>733 个原有动效</li><li>23 个调研新入口</li><li>4K 60 帧</li><li>正式版 Apple 公证</li><li>源码公开</li>
       </ul>
     </div>
     <div>
@@ -634,6 +639,39 @@ kbd { display: inline-block; font: 600 13px/1 var(--sans); padding: 4px 7px 5px;
     </div>
     <div class="after" id="m-dl-after"></div>
     <details class="sums"><summary>SHA-256 校验值</summary><div class="sumlist" id="m-sums"></div></details>
+  </div>
+</section>
+
+<section id="m-research">
+  <div class="wrap">
+    <div class="head">
+      <div class="label">1.4 调研预览版 · 演示数据</div>
+      <h2>把研究数据变成连续讲述</h2>
+      <p class="lead">20 个可编辑基础模板，3 个组合预设。改数据、调样式、拖时间线，再导出视频；AI 与人工面板使用同一份配置。</p>
+    </div>
+    <div class="dl g">
+      <article class="card mine">
+        <span class="os">MAC · 调研预览版</span>
+        <h3>1.4.0-preview.1</h3>
+        <span class="sub">macOS 13 起 · Apple 芯片与 Intel 通用</span>
+        <p>预览包为本地临时签名，未经 Apple 公证。与正式版使用独立应用标识，可同时保留。macOS 可能阻止直接打开；需要公证安装包时请选上方 1.3 正式版。</p>
+        <div class="btns"><a class="btn primary" id="m-preview-download" href="https://github.com/rddmwmddr/roudai-aidongxiao/releases/download/v1.4.0-preview.1/RouDaiAiDongXiao-Research-Preview.dmg">下载调研预览版</a><a class="btn" href="https://github.com/rddmwmddr/roudai-aidongxiao/releases/tag/v1.4.0-preview.1">更新说明与校验值</a></div>
+      </article>
+      <article class="card">
+        <span class="os">数据与图表</span><h3>用真实数据继续编辑</h3>
+        <p>前后对比、点阵、动态排名、指标数字、问卷、桑基、漏斗、散点、热力日历、原声卡、研究时间轴、分屏与堆叠面积等。表格粘贴与 CSV 导入，中文字体本地可用。</p>
+        <p>多选题按有效样本计算；桑基读取配对流向；漏斗明确上一阶段或首阶段口径。</p>
+      </article>
+      <article class="card">
+        <span class="os">连续叙事</span><h3>从一个人看到整组样本</h3>
+        <p>稳定 ID 的用户重排、样本拉远、动态文字与图表转换、城市镜头、决策路径、产品场景聚焦。产品场景采用分层视差。</p>
+        <p>预设：用户重新分组、从个体到整体、原声变成数据。顺序、镜头与时长都能改。</p>
+      </article>
+    </div>
+    <div class="after"><a href="https://github.com/rddmwmddr/roudai-aidongxiao/releases/download/v1.4.0-preview.1/Research-Examples.zip">下载演示工程与 CSV</a><a href="https://github.com/rddmwmddr/roudai-aidongxiao/blob/main/docs/OPUS.md">编辑与 AI 调用文档</a><a href="https://github.com/rddmwmddr/roudai-aidongxiao/releases/download/v1.4.0-preview.1/Research-All-Templates.mp4">全部 23 个入口验收视频</a></div>
+    <figure class="film"><video src="roudai-tools-assets/m-research-preview.mp4" poster="roudai-tools-assets/m-research-preview.jpg" controls playsinline preload="none" width="1920" height="1080" aria-label="调研进阶模板与三个组合预设的实际导出视频，全部为演示数据"></video></figure>
+    <p class="film-cap">实际导出的进阶动效与组合预设。全部为演示数据，非真实研究结论。</p>
+    <ol><li>安装后，将安装盘的「演示工程与CSV」复制到本地。</li><li>按 ⌘O 打开「重构调研-全部模板.dmboard」。</li><li>选择片段，点右上角「这一镜」编辑数据、样式、时间线和输出；动效胶囊内有「调研数据 · Opus」「调研组合预设」。</li></ol>
   </div>
 </section>
 
@@ -756,10 +794,10 @@ kbd { display: inline-block; font: 600 13px/1 var(--sans); padding: 4px 7px 5px;
   <div class="wrap">
     <div class="head">
       <h2>动效库</h2>
-      <p class="lead">733 个动效，11 个分类。分镜：文稿匹配动效。胶囊：替换动效。</p>
+      <p class="lead">正式版：733 个动效、11 个分类。1.4 调研预览版另增 20 个基础模板与 3 个组合预设，见上方调研动效。</p>
     </div>
     <div class="lib"><figure><img src="roudai-tools-assets/lib-percent.jpg" alt="百分比示例" width="480" height="270" loading="lazy"><figcaption>百分比<span>11</span></figcaption></figure><figure><img src="roudai-tools-assets/lib-chart.jpg" alt="图表示例" width="480" height="270" loading="lazy"><figcaption>图表<span>55</span></figcaption></figure><figure><img src="roudai-tools-assets/lib-fine.jpg" alt="细读图表示例" width="480" height="270" loading="lazy"><figcaption>细读图表<span>39</span></figcaption></figure><figure><img src="roudai-tools-assets/lib-text.jpg" alt="文字示例" width="480" height="270" loading="lazy"><figcaption>文字<span>26</span></figcaption></figure><figure><img src="roudai-tools-assets/lib-texfx.jpg" alt="文字特效示例" width="480" height="270" loading="lazy"><figcaption>文字特效<span>130</span></figcaption></figure><figure><img src="roudai-tools-assets/lib-kxs.jpg" alt="状态示例" width="480" height="270" loading="lazy"><figcaption>状态<span>64</span></figcaption></figure><figure><img src="roudai-tools-assets/lib-kxi.jpg" alt="交互示例" width="480" height="270" loading="lazy"><figcaption>交互<span>58</span></figcaption></figure><figure><img src="roudai-tools-assets/lib-kxm.jpg" alt="质感示例" width="480" height="270" loading="lazy"><figcaption>质感<span>54</span></figcaption></figure><figure><img src="roudai-tools-assets/lib-loader.jpg" alt="加载示例" width="480" height="270" loading="lazy"><figcaption>加载<span>99</span></figcaption></figure><figure><img src="roudai-tools-assets/lib-button.jpg" alt="按钮示例" width="480" height="270" loading="lazy"><figcaption>按钮<span>101</span></figcaption></figure><figure><img src="roudai-tools-assets/lib-toggle.jpg" alt="开关提示示例" width="480" height="270" loading="lazy"><figcaption>开关提示<span>96</span></figcaption></figure></div>
-    <p class="credit">动效来源：<a href="https://github.com/showheyohtaki/motion-prompt" target="_blank" rel="noopener">Motion Prompt</a>、<a href="https://github.com/larashero3-dotcom/lieflat-charts" target="_blank" rel="noopener">Lieflat Charts</a>、<a href="https://colorion.co/" target="_blank" rel="noopener">Colorion</a>。效果参考：<a href="https://kinetics.colorion.co/" target="_blank" rel="noopener">Kinetics</a>、<a href="https://verse.rajatsethii.in/" target="_blank" rel="noopener">Verse Text</a>、<a href="https://uiarc.dev/" target="_blank" rel="noopener">uiarc</a>（MIT）。</p>
+    <p class="credit">调研模板来源：<a href="https://github.com/GovinduSasanka/opus-motion-library" target="_blank" rel="noopener">Opus Motion Library（MIT）</a>，地图轮廓：<a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth（公有领域）</a>。动效来源：<a href="https://github.com/showheyohtaki/motion-prompt" target="_blank" rel="noopener">Motion Prompt</a>、<a href="https://github.com/larashero3-dotcom/lieflat-charts" target="_blank" rel="noopener">Lieflat Charts</a>、<a href="https://colorion.co/" target="_blank" rel="noopener">Colorion</a>。效果参考：<a href="https://kinetics.colorion.co/" target="_blank" rel="noopener">Kinetics</a>、<a href="https://verse.rajatsethii.in/" target="_blank" rel="noopener">Verse Text</a>、<a href="https://uiarc.dev/" target="_blank" rel="noopener">uiarc</a>（MIT）。</p>
   </div>
 </section>
 
@@ -983,15 +1021,14 @@ const GUANJIA_REPO = "https://github.com/rddmwmddr/roudai-guanjia";
 
 /* ===== 肉呆爱动效发布信息：发新版时只改这里 ===== */
 const MOTION = {
-  version: "1.2.0",
-  released: "2026-11-07",
-  github: "https://github.com/rddmwmddr/roudai-aidongxiao/releases/download/v1.2.0/",
+  version: "1.3.0",
+  released: "2026-11-09",
+  github: "https://github.com/rddmwmddr/roudai-aidongxiao/releases/download/v1.3.0/",
   file: "RouDaiAiDongXiao.dmg",
-  size: "10.3 MB",
-  sha: "a71e990183df2c51b89a31d0fe06b4ea7659a1356f0ad1445965b6acf6a2a608",
-  gitee: "https://gitee.com/rddmw/roudai-aidongxiao/releases/download/v1.2.0/",
-  // Gitee 不可用时把 gitee 留空，国内下载换回这个百度网盘链接
-  baidu: {"url": "https://pan.baidu.com/s/1POgsxUj2cTSCH5kHWfVBXA", "code": "gtra"},
+  size: "10.9 MB",
+  sha: "9d195b83a2d132ec10817df0ed06cb3dda73565544895417783fa6588af3f78a",
+  gitee: "",
+  baidu: null,
 };
 const MOTION_REPO = "https://github.com/rddmwmddr/roudai-aidongxiao";
 
